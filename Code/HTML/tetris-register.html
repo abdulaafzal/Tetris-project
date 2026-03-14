@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Register</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="../CSS/tetris.css">
+
+</head>
+
+<body>
+  <!-- Game title with different coloured letters -->
+  <h1 class="tetris-title">
+    <span>T</span><span>E</span><span>T</span><span>R</span><span>I</span><span>S</span>
+  </h1>
+
+  <div class="Navigation">
+    <!-- Navigation bar for different pages -->
+    <a href="tetris-register.html">Register</a>
+    <a href="tetris-login.html">Login</a>
+    <a href="tetris-ranking.html">Ranking</a>
+    <a href="tetris-option.html">Options</a>
+    <a href="tetris-game.html">Game</a>
+  </div>
+
+  <div class="login-box">
+    <h2>Register</h2>
+    <!-- Input fields for user details -->
+    <input type="text" id="newUsername" placeholder="Choose a Username">
+    <input type="number" id="newPhonenumber" placeholder="Enter your phone number">
+    <input type="text" id="newEmail" placeholder="Enter Email address">
+    <input type="password" id="newPassword" placeholder="Choose a Password">
+    <input type="submit" value="Register" onclick="registerUser()">
+    <p id="register-result"></p>
+    <!-- Link to login page if user already has an account -->
+    <p>Already have an account? <a href="tetris-login.html">Login here</a></p>
+  </div>
+
+
+  <script src="../JAVA/tetris-register.js"></script>
+    
+
+</body>
+
+</html>

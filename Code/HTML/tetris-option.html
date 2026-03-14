@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Options</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="../CSS/tetris.css">
+</head>
+<body>
+
+  <h1 class="tetris-title">
+    <!-- Game title with different coloured letters -->
+    <span>T</span><span>E</span><span>T</span><span>R</span><span>I</span><span>S</span>
+  </h1>
+
+  <!-- Navigation bar for different pages -->
+  <div class="Navigation">
+    <a href="tetris-login.html">Login</a>
+    <a href="tetris-register.html">Register</a>
+    <a href="tetris-ranking.html">Ranking</a>
+    <a href="tetris-game.html">Game</a>
+  </div>
+
+  <!-- Box with volume slider and instructions-->
+  <div class="options-box">
+    <h2>Options</h2>
+    <label for="volume">Volume:</label><br>
+    <input type="range" id="volume" min="0" max="100" value="50" step="1" oninput="showVolume(this.value)">
+    <p id="volume-value">50%</p>
+
+    <h3>Instructions</h3>
+    <p>
+      Use the arrow keys to move and rotate blocks:<br>
+      ⬅ Left, ➡ Right, ⬆ Rotate, ⬇ Drop.<br>
+      Try to complete lines to score points!
+    </p>
+
+
+  <script>
+    //update the volume in real time
+    function showVolume(value) {
+      document.getElementById("volume-value").innerText = value + "%";
+    }
+
+    function goBack() {
+      window.location.href = "tetris-index.html";
+    }
+  </script>
+
+</body>
+</html>

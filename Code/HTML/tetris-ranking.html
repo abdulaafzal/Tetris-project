@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris Ranking</title>
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="../CSS/tetris.css" />
+</head>
+<body>
+
+  <!-- Game Title -->
+  <h1 class="tetris-title">
+    <span>T</span><span>E</span><span>T</span><span>R</span><span>I</span><span>S</span>
+  </h1>
+
+  <!-- Navigation -->
+  <div class="Navigation">
+    <a href="tetris-login.html">Login</a>
+    <a href="tetris-register.html">Register</a>
+    <a href="tetris-option.html">Options</a>
+    <a href="tetris-game.html">Game</a>
+  </div>
+
+  <!-- Ranking Section -->
+  <div class="ranking-box">
+    <h2>Top Scores</h2>
+
+    <table id="ranking-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Username</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    /**
+     * Loads user rankings from localStorage and displays them in the table.
+     * Only valid user objects (with a username and score) are shown.
+     */
+    function loadRankings() {
+      const tbody = document.querySelector('#ranking-table tbody');
+      tbody.innerHTML = ''; // Clear existing rows
+      const users = [];
+
+      // Loop through everything stored in localStorage
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+
+        // Skip non-user keys like "currentUser" or "lastScore"
+        if (key === 'currentUser' || key === 'lastScore') continue;
+
+        try {
+          const data = JSON.parse(localStorage.getItem(key));
+
+          // Only include objects with valid username + numeric score
+          if (data && typeof data === 'object' &&
+              typeof data.username === 'string' &&
+              typeof data.score === 'number') {
+            users.push({
+              username: data.username,
+              score: data.score
+            });
+          }
+        } catch (err) {
+          // Ignore invalid JSON entries
+          console.warn(`Skipping invalid data for key "${key}"`);
+        }
+      }
+
+      // Sort users by score (highest first)
+      users.sort((a, b) => b.score - a.score);
+
+      // Display the users in the table
+      if (users.length > 0) {
+        users.forEach((user, index) => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${user.username}</td>
+            <td>${user.score}</td>
+          `;
+          tbody.appendChild(row);
+        });
+      } else {
+        // Show placeholder if no scores exist
+        const row = document.createElement('tr');
+        row.innerHTML = `<td colspan="3">No scores yet. Play to set your first record!</td>`;
+        tbody.appendChild(row);
+      }
+    }
+
+    // Load rankings once the page is fully ready
+    document.addEventListener('DOMContentLoaded', loadRankings);
+  </script>
+</body>
+</html>

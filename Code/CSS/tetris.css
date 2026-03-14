@@ -1,0 +1,347 @@
+   body {
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: url("../images/tetris-image-background.jpg");
+     background-size: cover;
+     font-family: Arial, sans-serif;
+     color: white;
+     flex-direction: column;
+     height: 100vh;
+   }
+
+   h1 {
+     font-size: 50px;
+     font-weight: bold;
+     margin-bottom: 20px;
+     letter-spacing: 3px;
+   }
+
+   .tetris-title span:nth-child(1) {
+     color: red;
+   }
+
+   .tetris-title span:nth-child(2) {
+     color: orange;
+   }
+
+   .tetris-title span:nth-child(3) {
+     color: yellow;
+   }
+
+   .tetris-title span:nth-child(4) {
+     color: green;
+   }
+
+   .tetris-title span:nth-child(5) {
+     color: blue;
+   }
+
+   .tetris-title span:nth-child(6) {
+     color: purple;
+   }
+
+   .Navigation a {
+     color: white;
+     font-weight: bold;
+     margin: 0 15px;
+     font-size: 18px;
+   }
+
+   .Navigation a:hover {
+     color: grey;
+   }
+
+   .login-box {
+     background: black;
+     padding: 30px;
+     border-radius: 10px;
+     text-align: center;
+     width: 300px;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+   }
+
+   .login-box input {
+     width: 90%;
+     padding: 10px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 5px;
+   }
+
+   .login-box input[type="submit"] {
+     background: blue;
+     font-weight: bold;
+     cursor: pointer;
+     color: white;
+   }
+
+   .login-box input[type="submit"]:hover {
+     background: blue;
+   }
+
+   .options-box {
+     text-align: center;
+     background: black;
+   }
+
+
+   .ranking-box {
+     background: grey;
+     padding: 30px;
+     border-radius: 10px;
+     text-align: center;
+     width: 400px;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+     margin: 20px auto;
+   }
+
+   #ranking-table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: 15px;
+   }
+
+   #ranking-table th,
+   #ranking-table td {
+     border: 1px solid #555;
+     padding: 10px;
+     text-align: center;
+   }
+
+   #ranking-table th {
+     background: black;
+     color: yellow;
+   }
+
+   #ranking-table td {
+     color: white;
+   }
+
+
+
+   .home-container {
+     background: rgba(0, 0, 0, 0.7);
+     padding: 40px;
+     border-radius: 15px;
+     text-align: center;
+     width: 400px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+     color: white;
+     margin: auto;
+   }
+
+   .home-container h2 {
+     color: #00BFFF;
+     margin-bottom: 10px;
+   }
+
+   .home-container p {
+     margin-bottom: 20px;
+     color: #ddd;
+   }
+
+   .menu-buttons {
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+   }
+
+   .menu-buttons button {
+     padding: 10px 20px;
+     border: none;
+     border-radius: 10px;
+     color: white;
+     font-weight: bold;
+     cursor: pointer;
+     transition: background 0.3s;
+   }
+
+   .menu-buttons button:hover {
+     background: #1E90FF;
+   }
+
+   .home-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     color: white;
+     margin-top: 50px;
+   }
+
+   .menu-buttons {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     margin-top: 20px;
+   }
+
+   .menu-btn {
+     width: 200px;
+     padding: 12px;
+     font-size: 18px;
+     font-weight: bold;
+     border: none;
+     border-radius: 8px;
+     color: white;
+     cursor: pointer;
+     transition: transform 0.2s, box-shadow 0.2s;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+   }
+
+   .menu-btn:hover {
+     transform: scale(1.08);
+     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+   }
+
+
+   .red {
+     background-color: red;
+   }
+
+   .orange {
+     background-color: orange;
+   }
+
+   .yellow {
+     background-color: yellow;
+     color: black;
+   }
+
+   .green {
+     background-color: green;
+   }
+
+   .blue {
+     background-color: blue;
+   }
+
+   .purple {
+     background-color: purple;
+   }
+
+
+
+   .game-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+     margin-top: 30px;
+   }
+
+   canvas {
+     background-color: #111;
+     border: 3px solid #555;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+   }
+
+   .game-info {
+     color: white;
+     text-align: center;
+   }
+
+   .game-info button {
+     background-color: cyan;
+     border: none;
+     padding: 10px 15px;
+     border-radius: 6px;
+     color: white;
+     cursor: pointer;
+     margin-top: 10px;
+     font-weight: bold;
+   }
+
+   .game-info button:hover {
+     background-color: cyan;
+   }
+
+
+   #result {
+     margin-top: 15px;
+     font-size: 14px;
+     color: #ff6666;
+   }
+
+   .navigation {
+     margin-bottom: 20px;
+   }
+
+   .navigation a {
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+     margin: 0 15px;
+     font-size: 18px;
+   }
+
+   .navigation a:hover {
+     color: purple;
+   }
+
+   .tetris-title {
+     text-align: center;
+   }
+
+   .game-over-screen {
+     background: rgba(0, 0, 0, 0.85);
+     border: 3px solid #ff3030;
+     border-radius: 16px;
+     padding: 40px 60px;
+     text-align: center;
+     box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+   }
+
+   .game-over-screen h2 {
+     font-size: 3.6rem;
+     color: #ff3030;
+     text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+     margin: 0 0 15px;
+   }
+
+   .game-over-screen p {
+     font-size: 1.25rem;
+     margin-bottom: 20px;
+   }
+
+   .game-over-screen span {
+     color: #ffcc00;
+     font-weight: bold;
+   }
+
+   .gameover-buttons {
+     display: flex;
+     justify-content: center;
+     gap: 16px;
+   }
+
+   .gameover-buttons button {
+     padding: 12px 22px;
+     font-size: 1rem;
+     border-radius: 10px;
+     border: none;
+     cursor: pointer;
+     font-weight: bold;
+   }
+
+   #play-again {
+     background: yellow;
+     color: black;
+   }
+
+   #main-menu {
+     background: turquoise;
+     color: white;
+   }
+
+   #play-again:hover {
+     transform: scale(1.03);
+   }
+
+   #main-menu:hover {
+     transform: scale(1.03);
+   }

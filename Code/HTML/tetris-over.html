@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Game Over</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="../CSS/tetris.css">
+</head>
+<body class="game-over-page">
+
+  <!-- Navigation bar for different pages -->
+  <div class="Navigation">
+    <a href="tetris-register.html">Register</a>
+    <a href="tetris-login.html">Login</a>
+    <a href="tetris-ranking.html">Ranking</a>
+    <a href="tetris-option.html">Options</a>
+    <a href="tetris-game.html">Game</a>
+  </div>
+
+  <!-- Show your final score and gives option to play again or go to main menu-->
+  <div class="game-over-screen">
+    <h2>GAME OVER</h2>
+    <p>Your final score: <span id="final-score">0</span></p>
+    <div class="gameover-buttons">
+      <button id="play-again">Play Again</button>
+      <button id="main-menu">Main Menu</button>
+    </div>
+  </div>
+
+  <script>
+    
+    (function () {
+      
+      // Log to confirm the script loaded successfully
+      console.log('game-over.html loaded');
+
+      // This retrieve the player's last score from localStorage, if no score is found, default to '0'
+      const score = localStorage.getItem('lastScore') || '0';
+      const finalEl = document.getElementById('final-score');
+      if (finalEl) finalEl.textContent = score;
+
+      //A "Play again" button that allows the user to play the game 
+      document.getElementById('play-again').addEventListener('click', () => {
+    
+        window.location.href = 'tetris-game.html';
+      });
+
+      // A "Main Menu" button that goes back to the main menu page
+      document.getElementById('main-menu').addEventListener('click', () => {
+        window.location.href = 'tetris-index.html';
+      });
+    })();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Game</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="../CSS/tetris.css">
+
+</head>
+
+<body>
+  <!-- Game title with different coloured letters -->
+  <h1 class="tetris-title">
+    <span>T</span><span>E</span><span>T</span><span>R</span><span>I</span><span>S</span>
+  </h1>
+
+  <!-- Navigation bar for different pages -->
+  <div class="Navigation">
+    <a href="tetris-register.html">Register</a>
+    <a href="tetris-login.html">Login</a>
+    <a href="tetris-ranking.html">Ranking</a>
+    <a href="tetris-option.html">Options</a>
+    <a href="tetris-game.html">Game</a>
+  </div>
+
+  <!-- The game area -->
+  <div class="game-container">
+    <canvas id="tetris" width="240" height="400"></canvas>
+    <!-- The score and controls-->
+    <div class="game-info">
+      <p>Score: <span id="score">0</span></p>
+      <button onclick="window.location.href='tetris-index.html'">Back to Menu</button>
+    </div>
+  </div>
+
+  <script type="module" src="../JAVA/tetris-main.js"></script>
+
+</body>
+
+</html>
