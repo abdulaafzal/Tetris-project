@@ -4,7 +4,7 @@
 A web-based implementation of the classic Tetris game where users can play directly in their browser and compete for high scores through a leaderboard system.
 
 ## Screenshot
-![Tetris Game Screenshot]
+![Tetris Game Screenshot](tetris-screenshot.png)
 
 ## Features
 
