@@ -20,6 +20,11 @@ A web-based implementation of the classic Tetris game where users can play direc
 - JavaScript
 - Object-Oriented Programming
 
+## Tools
+
+- Visual Studio Code
+- Git
+
 ## How to Run the Project
 
 1. Download or clone this repository.
